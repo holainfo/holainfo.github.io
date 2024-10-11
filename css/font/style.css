@@ -1,0 +1,454 @@
+@font-face {
+    font-family: 'libreBaskerville';
+    src: url('LibreBaskerville/LibreBaskerville-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'libreBaskerville-bold';
+    src: url('LibreBaskerville/LibreBaskerville-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'libreBaskerville-italic';
+    src: url('LibreBaskerville/LibreBaskerville-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'dmSanz';
+    src: url('DM_Sans/DMSans-VariableFont_opsz\,wght.ttf');
+
+}
+
+/*Reset CSS */
+
+/* Eliminar márgenes y paddings de todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+/* Remover decoraciones de enlaces */
+a {
+    text-decoration: none;
+    color: inherit;
+    /* Para que tome el color del texto padre */
+}
+
+/* Reiniciar el estilo de los encabezados */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+/* Reiniciar las listas */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Reiniciar tablas */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Reiniciar imágenes y videos */
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Reiniciar formularios */
+button,
+input,
+textarea {
+    font: inherit;
+    /* Para que usen la fuente del contenedor padre */
+    outline: none;
+    border: none;
+}
+
+/* Reiniciar el estilo del body */
+body {
+    font-size: 100%;
+    line-height: 1;
+    color: white;
+}
+
+/* --------------------------------------------- */
+body{
+    background: rgb(7, 7, 7);
+}
+.circulos {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    filter: blur(80px);
+    animation: circulo 100s linear infinite both;
+
+}
+
+.circulos .circulo {
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    animation: circulo 100s linear infinite both;
+}
+
+.circulos .circulo1 {
+    top: 0%;
+    left: 0%;
+}
+
+.circulos .circulo1 .path {
+    fill: rgb(187, 199, 27);
+
+}
+
+.circulos .circulo2 {
+    top: 0%;
+    right: 10%;
+}
+
+.circulos .circulo2 .path {
+    fill: rgb(3, 32, 119);
+
+}
+
+.circulos .circulo3 {
+    bottom: 0%;
+    left: 0%;
+}
+
+.circulos .circulo3 .path {
+    fill: rgb(88, 2, 138);
+
+
+}
+
+.circulos .circulo4 {
+    bottom: 0%;
+    right: 0%;
+}
+
+.circulos .circulo4 .path {
+    fill: rgb(18, 19, 18);
+
+}
+
+.header {
+    width: 100%;
+    min-height: 5em;
+
+    padding: 1em 2em;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    display: none;
+}
+
+
+.header .h1 {}
+
+.header .nav {}
+
+.header .ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .li {
+    margin: 1em;
+}
+
+.header .a {}
+
+
+.main {
+    margin: 0 0 1em;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Inicio */
+.section {
+    width: 100%;
+    min-height: 80vh;
+    margin: 1em 0;
+    padding: 2em;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.section .ul {
+    margin: 3em 0 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.section .ul .li {
+    margin: 0 1em;
+
+}
+
+.section .ul .a {
+    border: 1px solid rgb(112, 112, 112);
+    border-radius: 50%;
+
+    padding: 1em 1em 1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all .5s ease;
+}
+
+.section .ul .a:hover {
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.section .h2 {
+    font-family: "libreBaskerville";
+    font-weight: 600;
+    font-size: 5em;
+
+    margin: 0.1em 0;
+}
+
+
+
+.section .h3 {
+    /*background-color: aqua;*/
+    font-family: "libreBaskerville-italic";
+    font-size: 3.5em;
+
+
+}
+
+/* Trabajos */
+.works{
+    background: rgba(0, 0, 0, 0.6);
+    /*color:black; */    
+    box-shadow: 0 0 2em 1em white;
+    margin: 0 0 3em;
+}
+.section .grid {
+    width: 90%;
+    max-width: 40em;
+    margin: 1em 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 1em;
+}
+
+.section .article {
+    width: 100%;
+    min-height: 20vh;
+    background: lightgray;
+    border-radius: 1em;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.section .a {}
+
+.section .figure {
+    width: 100%;
+}
+
+.section .img {
+    width: 100%;
+}
+
+.section .h4 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(1rem);
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 1.9em;
+    font-family: "libreBaskerville-italic";
+    opacity: 0;
+    transform: translateZ(1.2emem) scale(1.2);
+    transition: all .5s ease;
+}
+
+.section .article:hover .h4 {
+    opacity: 1;
+    transform: translateZ(2em) scale(1);
+}
+
+.section .info {
+    font-size: 1.2em;
+}
+
+
+
+/* Contacto */
+.about {}
+
+.about .h2 {
+    margin: 0 0 2rem;
+}
+
+.about .p {
+    font-family: "dmSanz";
+    max-width: 40em;
+    margin: 0 0 2em;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.about .rrss {
+    width: 100%;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .li {
+    margin: 0 1em;
+}
+
+.about .a {}
+
+.about .svg {
+    width: 3.5em;
+    height: 3.5em;
+}
+
+
+.footer {
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    z-index: 2;
+}
+
+.footer .span {}
+.footer .img{
+    width: 4em;
+    height: 4em;
+}
+
+
+
+@media (max-width:800px){
+    .section .h2 { 
+        font-size: 4.5em;
+    }
+    .section .h3 { 
+        font-size: 3.2em;
+    }
+}
+@media (max-width:735px){
+    .section .h2 { 
+        font-size: 4em;
+    }
+    .section .h3 { 
+        font-size: 3em;
+    }
+}
+
+@media (max-width:700px){
+    .section .h2 { 
+        font-size: 3.5em;
+    }
+    .section .h3 { 
+        font-size: 2.7em;
+    }
+    .about .p {
+        font-size: 1em;
+    }
+    .section .ul .li{ 
+       margin: 1.5em 1em;
+    }
+}
+@media (max-width:604px){
+    .section .h2 { 
+        font-size: 3em;
+    }
+    .section .h3 { 
+        font-size: 2.4em;
+    }
+}
+
+@media (max-width:537px){
+    .section .h2 { 
+        font-size: 2.5em;
+        margin: 0 0 .4em;
+    }
+    .section .h3 { 
+        font-size: 1.5em;
+    }
+    .about .p {
+        font-size: .7em;
+    }
+    .section .li { 
+        font-size: .7em;
+    }
+}
+@media (max-width:472px){
+    .section .h2 { 
+        font-size: 2em;
+    }
+    .section .h3 { 
+        font-size: 1.3em;
+    }
+    .section .li { 
+        font-size: .6em;
+    }
+}
+
+
+
+@keyframes circulo {
+    from {
+        transform: rotate(0deg) scale(2);
+    }
+
+    to {
+        transform: rotate(360deg) scale(2);
+    }
+
+}
