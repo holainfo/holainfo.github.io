@@ -16,12 +16,9 @@
 @font-face {
     font-family: 'dmSanz';
     src: url('DM_Sans/DMSans-VariableFont_opsz\,wght.ttf');
-
 }
 
 /*Reset CSS */
-
-/* Eliminar márgenes y paddings de todos los elementos */
 * {
     margin: 0;
     padding: 0;
@@ -30,14 +27,11 @@
     vertical-align: baseline;
 }
 
-/* Remover decoraciones de enlaces */
 a {
     text-decoration: none;
     color: inherit;
-    /* Para que tome el color del texto padre */
 }
 
-/* Reiniciar el estilo de los encabezados */
 h1,
 h2,
 h3,
@@ -48,36 +42,30 @@ h6 {
     font-weight: normal;
 }
 
-/* Reiniciar las listas */
 ul,
 ol {
     list-style: none;
 }
 
-/* Reiniciar tablas */
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
 
-/* Reiniciar imágenes y videos */
 img,
 video {
     max-width: 100%;
     height: auto;
 }
 
-/* Reiniciar formularios */
 button,
 input,
 textarea {
     font: inherit;
-    /* Para que usen la fuente del contenedor padre */
     outline: none;
     border: none;
 }
 
-/* Reiniciar el estilo del body */
 body {
     font-size: 100%;
     line-height: 1;
@@ -86,7 +74,7 @@ body {
 
 /* --------------------------------------------- */
 body{
-    background: rgb(7, 7, 7);
+    background: rgba(0, 0, 0 , 1);
 }
 .circulos {
     position: fixed;
@@ -96,15 +84,14 @@ body{
     left: 0;
     z-index: 1;
     filter: blur(80px);
-    animation: circulo 100s linear infinite both;
-
+    animation: circulo 50s linear infinite both;
 }
 
 .circulos .circulo {
     position: absolute;
     width: 50%;
     height: 60%;
-    animation: circulo 100s linear infinite both;
+    animation: circulo 50s linear infinite both;
 }
 
 .circulos .circulo1 {
@@ -114,7 +101,6 @@ body{
 
 .circulos .circulo1 .path {
     fill: rgb(187, 199, 27);
-
 }
 
 .circulos .circulo2 {
@@ -124,7 +110,6 @@ body{
 
 .circulos .circulo2 .path {
     fill: rgb(3, 32, 119);
-
 }
 
 .circulos .circulo3 {
@@ -134,8 +119,6 @@ body{
 
 .circulos .circulo3 .path {
     fill: rgb(88, 2, 138);
-
-
 }
 
 .circulos .circulo4 {
@@ -145,41 +128,7 @@ body{
 
 .circulos .circulo4 .path {
     fill: rgb(18, 19, 18);
-
 }
-
-.header {
-    width: 100%;
-    min-height: 5em;
-
-    padding: 1em 2em;
-
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-
-    display: none;
-}
-
-
-.header .h1 {}
-
-.header .nav {}
-
-.header .ul {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.header .li {
-    margin: 1em;
-}
-
-.header .a {}
-
 
 .main {
     margin: 0 0 1em;
@@ -201,6 +150,11 @@ body{
     align-items: center;
 }
 
+.section .info {
+    font-size: 1.2em;
+    animation: aparecer 2s ease 1 both;
+}
+
 .section .ul {
     margin: 3em 0 0;
     display: flex;
@@ -211,7 +165,6 @@ body{
 
 .section .ul .li {
     margin: 0 1em;
-
 }
 
 .section .ul .a {
@@ -221,11 +174,17 @@ body{
     padding: 1em 1em 1em;
     text-transform: uppercase;
     font-weight: 600;
-    transition: all .5s ease;
+    transition: all .2s ease;
+    animation: aparecer 2s ease 1 backwards .5s;
+
 }
 
 .section .ul .a:hover {
     border: 1px solid rgb(255, 255, 255);
+}
+
+.section .ul .a:nth-of-type(2){
+    animation-delay: .8s;
 }
 
 .section .h2 {
@@ -236,20 +195,14 @@ body{
     margin: 0.1em 0;
 }
 
-
-
 .section .h3 {
-    /*background-color: aqua;*/
     font-family: "libreBaskerville-italic";
     font-size: 3.5em;
-
-
 }
 
 /* Trabajos */
 .works{
-    background: rgba(0, 0, 0, 0.6);
-    /*color:black; */    
+    background: rgba(0, 0, 0, 0.5);   
     box-shadow: 0 0 2em 1em white;
     margin: 0 0 3em;
 }
@@ -277,8 +230,6 @@ body{
     position: relative;
     overflow: hidden;
 }
-
-.section .a {}
 
 .section .figure {
     width: 100%;
@@ -316,14 +267,7 @@ body{
     transform: translateZ(2em) scale(1);
 }
 
-.section .info {
-    font-size: 1.2em;
-}
-
-
-
 /* Contacto */
-.about {}
 
 .about .h2 {
     margin: 0 0 2rem;
@@ -350,27 +294,23 @@ body{
     margin: 0 1em;
 }
 
-.about .a {}
-
 .about .svg {
     width: 3.5em;
     height: 3.5em;
 }
 
-
 .footer {
     text-align: center;
     padding: 1em 0;
     position: relative;
+    background-color: rgba(255, 255, 255, 0.2);
     z-index: 2;
 }
 
-.footer .span {}
 .footer .img{
     width: 4em;
     height: 4em;
 }
-
 
 
 @media (max-width:800px){
@@ -381,6 +321,7 @@ body{
         font-size: 3.2em;
     }
 }
+
 @media (max-width:735px){
     .section .h2 { 
         font-size: 4em;
@@ -428,6 +369,7 @@ body{
         font-size: .7em;
     }
 }
+
 @media (max-width:472px){
     .section .h2 { 
         font-size: 2em;
@@ -441,7 +383,6 @@ body{
 }
 
 
-
 @keyframes circulo {
     from {
         transform: rotate(0deg) scale(2);
@@ -449,6 +390,19 @@ body{
 
     to {
         transform: rotate(360deg) scale(2);
+    }
+
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0%);
     }
 
 }
