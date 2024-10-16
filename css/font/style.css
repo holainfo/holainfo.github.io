@@ -73,9 +73,10 @@ body {
 }
 
 /* --------------------------------------------- */
-body{
-    background: rgba(0, 0, 0 , 1);
+body {
+    background: rgba(0, 0, 0, 1);
 }
+
 .circulos {
     position: fixed;
     width: 100%;
@@ -183,7 +184,7 @@ body{
     border: 1px solid rgb(255, 255, 255);
 }
 
-.section .ul .a:nth-of-type(2){
+.section .ul .a:nth-of-type(2) {
     animation-delay: .8s;
 }
 
@@ -201,11 +202,12 @@ body{
 }
 
 /* Trabajos */
-.works{
-    background: rgba(0, 0, 0, 0.5);   
+.works {
+    background: rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 2em 1em white;
     margin: 0 0 3em;
 }
+
 .section .grid {
     width: 90%;
     max-width: 40em;
@@ -215,6 +217,7 @@ body{
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     gap: 1em;
 }
+
 
 .section .article {
     width: 100%;
@@ -240,6 +243,7 @@ body{
 }
 
 .section .h4 {
+    cursor: pointer;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
@@ -266,6 +270,69 @@ body{
     opacity: 1;
     transform: translateZ(2em) scale(1);
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50em;
+    height: 30em;
+    transform: translate(-50%, -50%);
+
+    color: black;
+
+    background: rgb(185, 185, 185);
+    border-radius: 1em;
+}
+
+.modalX {
+    cursor: pointer;
+    width: 6vh;
+    height: 6vh;
+    position: relative;
+    justify-content: center;
+
+    margin: 1em 1em 0;
+}
+
+.descripcion {
+    width: 80%;
+    margin: 0 auto; 
+    text-align: center;
+}
+
+.imgModal {
+    width: 50vh;
+    height: 50vh;
+    position: relative;
+}
+
+.figureModal {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.divEnlaces {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+}
+
+.url {
+    width: 20em;
+    margin:0 2em 1em;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 2.3em;
+    text-transform: uppercase;
+}
+
 
 /* Contacto */
 
@@ -307,80 +374,271 @@ body{
     z-index: 2;
 }
 
-.footer .img{
+.footer .img {
     width: 4em;
     height: 4em;
 }
-
-
-@media (max-width:800px){
-    .section .h2 { 
-        font-size: 4.5em;
+@media (max-width:2000px) {
+    .modal {
+        width: 40em;
+        height: 30em;
     }
-    .section .h3 { 
-        font-size: 3.2em;
+    .modalX {
+        width: 6vh;
+        height: 6vh;
     }
+
+    .imgModal {
+        width: 30vh;
+        height: 30vh;
+    }
+        
+    .divEnlaces {
+        font-size: 1em;
+    }
+    
+    .url {
+        width: 15em;
+    }
+    
 }
 
-@media (max-width:735px){
-    .section .h2 { 
+
+@media (max-width:1050px) {
+    .modal {
+        width: 50em;
+        height: 40em;
+        
+        
+    }
+    .modalX {
+        width: 6vh;
+        height: 6vh;
+    }
+
+    .imgModal {
+        width: 30vh;
+        height: 30vh;
+    }
+        
+    .divEnlaces {
+        font-size: 1em;
+    }
+    
+    .url {
+        width: 15em;
+    }
+    
+}
+
+@media (max-width:800px) {
+    .section .h2 {
+        font-size: 4.5em;
+    }
+
+    .section .h3 {
+        font-size: 3.2em;
+    }
+
+    .modal {
+        width: 40em;
+        height: 30em;
+    }
+    .modalX {
+        width: 4vh;
+        height: 4vh;
+    }
+    
+    .imgModal {
+        width: 30vh;
+        height: 30vh;
+    }
+        
+    .divEnlaces {
+        font-size: .7em;
+    }
+    
+    .url {
+        width: 15em;
+    }
+    
+}
+
+@media (max-width:735px) {
+    .section .h2 {
         font-size: 4em;
     }
-    .section .h3 { 
+
+    .section .h3 {
         font-size: 3em;
     }
 }
 
-@media (max-width:700px){
-    .section .h2 { 
+@media (max-width:700px) {
+    .section .h2 {
         font-size: 3.5em;
     }
-    .section .h3 { 
+
+    .section .h3 {
         font-size: 2.7em;
     }
+
     .about .p {
         font-size: 1em;
     }
-    .section .ul .li{ 
-       margin: 1.5em 1em;
+
+    .section .ul .li {
+        margin: 1.5em 1em;
+    }
+
+    .modal {
+        width: 35em;
+        height: 30em;
+    }
+    .modalX {
+        width: 3vh;
+        height: 3vh;
+    }
+    
+    .imgModal {
+        width: 20vh;
+        height: 20vh;
+    }
+        
+    .divEnlaces {
+        font-size: .7em;
+    }
+    
+    .url {
+        width: 15em;
     }
 }
-@media (max-width:604px){
-    .section .h2 { 
+
+@media (max-width:604px) {
+    .section .h2 {
         font-size: 3em;
     }
-    .section .h3 { 
+
+    .section .h3 {
         font-size: 2.4em;
     }
 }
 
-@media (max-width:537px){
-    .section .h2 { 
+@media (max-width:537px) {
+    .section .h2 {
         font-size: 2.5em;
         margin: 0 0 .4em;
     }
-    .section .h3 { 
+
+    .section .h3 {
         font-size: 1.5em;
     }
+
     .about .p {
         font-size: .7em;
     }
-    .section .li { 
+
+    .section .li {
         font-size: .7em;
+    }
+
+    .modal {
+        width: 30em;
+        height: 30em;
+    }
+    .modalX {
+        width: 3vh;
+        height: 3vh;
+    }
+    
+    .imgModal {
+        width: 20vh;
+        height: 20vh;
+    }
+        
+    .divEnlaces {
+        font-size: .7em;
+    }
+    
+    .url {
+        width: 15em;
     }
 }
 
-@media (max-width:472px){
-    .section .h2 { 
+@media (max-width:472px) {
+    .section .h2 {
         font-size: 2em;
     }
-    .section .h3 { 
+
+    .section .h3 {
         font-size: 1.3em;
     }
-    .section .li { 
+
+    .section .li {
         font-size: .6em;
     }
+
+    .modal {
+        width: 25em;
+        height: 30em;
+    }
+    .modalX {
+        width: 3vh;
+        height: 3vh;
+    }
+    
+    .imgModal {
+        width: 15vh;
+        height: 15vh;
+    }
+        
+    .divEnlaces {
+        font-size: .7em;
+    }
+    
+    .url {
+        width: 15em;
+    }
 }
+
+@media (max-width:406px) {
+    .section .h2 {
+        font-size: 1.7em;
+    }
+
+    .section .h3 {
+        font-size: 1em;
+    }
+
+    .section .li {
+        font-size: .5em;
+    }
+
+    .modal {
+        width: 20em;
+        height: 32em;
+    }
+    .modalX {
+        width: 2.7vh;
+        height: 2.7vh;
+    }
+    
+    .imgModal {
+        width: 12vh;
+        height: 12vh;
+    }
+        
+    .divEnlaces {
+        font-size: .7em;
+    }
+    
+    .url {
+        width: 15em;
+    }
+}
+
+
+
 
 
 @keyframes circulo {
