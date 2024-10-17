@@ -70,6 +70,8 @@ body {
     font-size: 100%;
     line-height: 1;
     color: white;
+    min-width: 370px;
+    min-height: 380px;
 }
 
 /* --------------------------------------------- */
@@ -277,8 +279,12 @@ body {
     top: 50%;
     left: 50%;
     width: 50em;
+    max-height: 90vh;
     height: 30em;
     transform: translate(-50%, -50%);
+    animation: aparecerModal .7s ease;
+    overflow-y: auto;
+
 
     color: black;
 
@@ -296,10 +302,12 @@ body {
     margin: 1em 1em 0;
 }
 
-.descripcion {
-    width: 80%;
-    margin: 0 auto; 
-    text-align: center;
+.figureModal {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .imgModal {
@@ -307,13 +315,10 @@ body {
     height: 50vh;
     position: relative;
 }
-
-.figureModal {
-    width: 100%;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
+.descripcion {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .divEnlaces {
@@ -327,12 +332,18 @@ body {
 
 .url {
     width: 20em;
-    margin:0 2em 1em;
-    border: 1px solid rgb(0, 0, 0);
+    margin: 0 2em 1em;
+    border: 1px solid rgb(148, 147, 147);
     border-radius: 2.3em;
     text-transform: uppercase;
+    transition: all .2s ease;
+
 }
 
+.url:hover{
+    border: 1px solid rgb(0, 0, 0);
+
+}
 
 /* Contacto */
 
@@ -368,8 +379,9 @@ body {
 
 .footer {
     text-align: center;
-    padding: 1em 0;
+    padding: 1em 0 0;
     position: relative;
+    
     background-color: rgba(255, 255, 255, 0.2);
     z-index: 2;
 }
@@ -378,11 +390,13 @@ body {
     width: 4em;
     height: 4em;
 }
+
 @media (max-width:2000px) {
     .modal {
         width: 40em;
         height: 30em;
     }
+
     .modalX {
         width: 6vh;
         height: 6vh;
@@ -392,43 +406,15 @@ body {
         width: 30vh;
         height: 30vh;
     }
-        
+
     .divEnlaces {
         font-size: 1em;
     }
-    
+
     .url {
         width: 15em;
     }
-    
-}
 
-
-@media (max-width:1050px) {
-    .modal {
-        width: 50em;
-        height: 40em;
-        
-        
-    }
-    .modalX {
-        width: 6vh;
-        height: 6vh;
-    }
-
-    .imgModal {
-        width: 30vh;
-        height: 30vh;
-    }
-        
-    .divEnlaces {
-        font-size: 1em;
-    }
-    
-    .url {
-        width: 15em;
-    }
-    
 }
 
 @media (max-width:800px) {
@@ -444,24 +430,30 @@ body {
         width: 40em;
         height: 30em;
     }
+
     .modalX {
-        width: 4vh;
-        height: 4vh;
+        width: 5vh;
+        height: 5vh;
+        margin: .7em .7em 0;
+
     }
-    
+
     .imgModal {
         width: 30vh;
         height: 30vh;
     }
-        
-    .divEnlaces {
-        font-size: .7em;
+
+    .descripcion{
+        font-size: .9em;
     }
-    
+    .divEnlaces {
+        font-size: .9em;
+    }
+
     .url {
         width: 15em;
     }
-    
+
 }
 
 @media (max-width:735px) {
@@ -495,20 +487,23 @@ body {
         width: 35em;
         height: 30em;
     }
+
     .modalX {
         width: 3vh;
         height: 3vh;
+        margin: .5em .5em 0;
+
     }
-    
+
     .imgModal {
         width: 20vh;
         height: 20vh;
     }
-        
+
     .divEnlaces {
         font-size: .7em;
     }
-    
+
     .url {
         width: 15em;
     }
@@ -521,6 +516,11 @@ body {
 
     .section .h3 {
         font-size: 2.4em;
+    }
+
+    .modal {
+        width: 30em;
+        height: 30em;
     }
 }
 
@@ -543,23 +543,26 @@ body {
     }
 
     .modal {
-        width: 30em;
-        height: 30em;
+        width: 25em;
+        height: 25em;
     }
+
     .modalX {
         width: 3vh;
         height: 3vh;
+        margin: .4em .4em 0;
+
     }
-    
+
     .imgModal {
         width: 20vh;
         height: 20vh;
     }
-        
+
     .divEnlaces {
         font-size: .7em;
     }
-    
+
     .url {
         width: 15em;
     }
@@ -578,27 +581,7 @@ body {
         font-size: .6em;
     }
 
-    .modal {
-        width: 25em;
-        height: 30em;
-    }
-    .modalX {
-        width: 3vh;
-        height: 3vh;
-    }
     
-    .imgModal {
-        width: 15vh;
-        height: 15vh;
-    }
-        
-    .divEnlaces {
-        font-size: .7em;
-    }
-    
-    .url {
-        width: 15em;
-    }
 }
 
 @media (max-width:406px) {
@@ -615,28 +598,51 @@ body {
     }
 
     .modal {
-        width: 20em;
-        height: 32em;
+        width: 22em;
+        height: 25em;
     }
+
     .modalX {
-        width: 2.7vh;
-        height: 2.7vh;
+        width: 1.5em;
+        height: 1.5em;
+        margin: .2em .2em 0;
     }
-    
+
     .imgModal {
-        width: 12vh;
-        height: 12vh;
+        width: 17vh;
+        height: 17vh;
     }
-        
+
     .divEnlaces {
         font-size: .7em;
     }
-    
+
     .url {
         width: 15em;
     }
+   
+    .footer .img {
+        width: 3.2em;
+        height: 3.2em;
+    }
 }
 
+@media (max-height:300px) {
+    
+    .imgModal {
+        width: 22vh;
+        height: 22vh;
+    }
+.descripcion{
+    font-size: .7em;
+}
+    .divEnlaces {
+        font-size: .7em;
+        margin: 1em 0;
+    }
+
+    
+}
 
 
 
@@ -663,4 +669,13 @@ body {
         transform: translateY(0%);
     }
 
+}
+
+@keyframes aparecerModal {
+    from {
+        opacity: 0;      
+    }
+    to {
+        opacity: 1;      
+    }
 }
